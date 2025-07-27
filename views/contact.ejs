@@ -1,0 +1,16 @@
+    <%- include("partials/header.ejs") %>
+    
+    <div class="md:w-5xl w-full md:my-5 p-8 md:space-y-12 space-y-24 mx-auto  md:shadow-2xl md:shadow-blue-500 rounded-2xl">
+        <h1 class="text-center font-bold text-4xl text-blue-600">Contact Me</h1>
+
+    <form class="flex flex-col  space-y-5" action="/contact/submit" method="post">
+        
+        <input class="p-5 mb-10 md:w-[552px] w-[300px] mx-auto  border-2 border-amber-600 rounded-xl h-15" type="text" name="name" placeholder="Name" required>
+        <input class="p-5 mb-10 md:w-[552px] w-[300px] mx-auto  border-2 border-amber-600 rounded-xl h-15" type="text" name="email" placeholder="Email" required>
+
+        
+        <textarea class="p-5 border-2 border-amber-600 rounded-xl md:h-[150px] h-[300px]"  name="comment" placeholder="Comment"></textarea>
+
+        <button class="text-white h-10 w-40 mx-auto mt-16 md:mt-3 rounded-xl bg-blue-600 hover:bg-blue-700 cursor-pointer font-bold text-xl" type="submit">Send</button>
+    </form>
+    </div>

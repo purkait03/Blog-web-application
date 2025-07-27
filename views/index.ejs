@@ -1,0 +1,40 @@
+
+<%- include("partials/header.ejs") %>
+        <main class="text-black flex-grow bg-amber-50">
+            <% if (locals.posts && posts.length>0) {%>
+                <% posts.forEach((post,index)=> {%>
+                    <div class="md:w-5xl w-full p-8 space-y-10 mx-auto mb-28 mt-14 md:rounded-2xl md:shadow-2xl transition-discrete">
+                        <h1 class="text-center font-bold text-4xl">
+                            <%= post.title %>
+                        </h1>
+                        <p>
+                            <%= post.content %>
+                        </p>
+
+                        <!-- buttons stars here -->
+                        <div class="space-x-5 flex justify-end">
+                            <a class="md:px-9 md:py-[8px] px-5 py-[6px] rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm md:text-xl" href="/edit/<%= index %>">Edit</a>
+                            
+                            <a class="md:px-6 md:py-[8px] px-4 py-[6px] rounded-xl bg-red-500 hover:bg-red-600 text-white font-bold text-sm md:text-xl  " href="/delete/<%= index %>">Delete</a>
+                        </div>
+                        <!-- buttons ends here -->
+                        
+                    </div>
+                    <div class="md:hidden border-b-2 w-[65%] mx-auto opacity-30"></div>
+                    <%}); %>
+                    <%} else {%>
+                        <h1 class="text-center font-bold text-4xl mt-[300px] mb-[400px]">Write your Blog 🧐</h1>
+                            <%} %>
+
+
+        </main>
+
+        
+<%- include("partials/footer.ejs") %>
+
+
+
+<!-- <div class="md:w-5xl w-full p-8 space-y-10 mx-auto ">
+        <h1 class="text-center font-bold text-4xl">Blog name</h1>
+        <p></p>
+</div> -->
