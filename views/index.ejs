@@ -3,7 +3,7 @@
         <main class="text-black flex-grow bg-amber-50">
             <% if (locals.posts && posts.length>0) {%>
                 <% posts.forEach((post,index)=> {%>
-                    <div class="md:w-5xl w-full p-8 space-y-10 mx-auto mb-28 mt-14 md:rounded-2xl md:shadow-2xl transition-discrete">
+                    <div class="md:w-5xl w-full p-8 space-y-10 mx-auto mb-28 mt-14 md:rounded-2xl md:border-2 bg-white">
                         <h1 class="text-center font-bold text-4xl">
                             <%= post.title %>
                         </h1>
